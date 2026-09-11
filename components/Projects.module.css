@@ -1,0 +1,805 @@
+.work {
+  padding: 90px 0 0;
+  background: linear-gradient(#161717, #121414 60%, #101112);
+  border-top: 1px solid var(--line);
+}
+.workIntro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+.workIntro > p {
+  font-size: 13px;
+  color: var(--muted);
+  padding-bottom: 5px;
+}
+.projectIndex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 55px 0 75px;
+  border-block: 1px solid var(--line);
+}
+.projectIndex a {
+  padding: 22px 17px;
+  font-size: 11px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.projectIndex a:first-child {
+  padding-left: 0;
+}
+.projectIndex a:last-child {
+  border: 0;
+}
+.projectIndex span {
+  font: 9px var(--mono);
+  color: var(--amber);
+}
+.projectIndex i {
+  font-style: normal;
+  margin-left: auto;
+  color: var(--muted);
+}
+.projectIndex a:hover {
+  color: var(--amber);
+}
+.project {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 7%;
+  padding: 0 0 100px;
+  margin-bottom: 90px;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.project:last-child {
+  margin-bottom: 0;
+}
+.visualColumn {
+  min-width: 0;
+  width: 100%;
+}
+.story {
+  padding-top: 6px;
+}
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font: 9px/1.6 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.projectMeta > span:first-child {
+  color: var(--amber);
+  white-space: nowrap;
+}
+.projectMeta > span:last-child {
+  text-align: right;
+  max-width: 220px;
+}
+.story > h3 {
+  font-size: clamp(38px, 4.4vw, 60px);
+  margin: 32px 0 15px;
+  font-weight: 500;
+}
+.tagline {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+}
+.description {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 19px;
+}
+.storyBlock {
+  margin-top: 34px;
+}
+.storyBlock > .eyebrow {
+  font-size: 9px;
+  color: var(--amber);
+}
+.storyBlock p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.storyBlock ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 25px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.storyBlock li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ffffff08;
+  display: flex;
+  gap: 12px;
+}
+.storyBlock li:before {
+  content: "+";
+  color: var(--amber);
+  font-family: var(--mono);
+}
+.userFlow {
+  display: flex;
+  border-block: 1px solid var(--line);
+  padding: 20px 0;
+  margin-top: 25px;
+  gap: 10px;
+}
+.userFlow > span {
+  position: relative;
+  font-size: 9px;
+  line-height: 1.5;
+  flex: 1;
+}
+.userFlow small {
+  font: 8px var(--mono);
+  color: var(--amber);
+  display: block;
+  margin-bottom: 8px;
+}
+.userFlow i {
+  font-style: normal;
+  position: absolute;
+  right: 6px;
+  top: 0;
+  color: var(--muted);
+}
+.why {
+  border-left: 1px solid var(--amber);
+  padding-left: 20px;
+  margin-top: 30px;
+}
+.why > span {
+  font-size: 9px;
+  color: var(--amber);
+}
+.why p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.sourceNote {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 23px;
+}
+.sourceNote summary {
+  cursor: pointer;
+  font: 10px var(--mono);
+  padding: 5px 0;
+}
+.sourceNote p {
+  margin-top: 12px;
+}
+.projectActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.projectActions > a:first-child {
+  font-size: 9px;
+  padding: 14px 17px;
+  gap: 25px;
+}
+.nextProject {
+  font: 9px var(--mono);
+  color: var(--muted);
+}
+.nextProject:hover {
+  color: var(--amber);
+}
+.finalist {
+  display: inline-block;
+  font: 9px var(--mono);
+  color: var(--sage);
+  border: 1px solid #a8bd9833;
+  padding: 10px 12px;
+  margin-top: 23px;
+}
+.visual {
+  min-height: 560px;
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  background: #1b1c1c;
+}
+.visualTop {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 24px;
+  font: 8px var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  border-bottom: 1px solid #ffffff0a;
+}
+.visualFoot {
+  display: block;
+  position: absolute;
+  bottom: 17px;
+  left: 24px;
+  font: 8px var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.traceVisual {
+  background:
+    radial-gradient(ellipse at 50% 40%, #73533440, transparent 65%), #191a1b;
+}
+.packageScene {
+  position: relative;
+  height: 310px;
+}
+.packageFallback {
+  position: absolute;
+  left: 44%;
+  top: 26%;
+  font-size: 100px;
+  color: #b8865520;
+  z-index: -1;
+}
+.qr {
+  position: absolute;
+  top: 52%;
+  left: 18%;
+  color: var(--cream);
+  padding: 13px;
+  background: #242321;
+  border: 1px solid #c7b59a55;
+  box-shadow: 10px 14px 30px #0006;
+  transform: rotate(-7deg);
+}
+.qr svg {
+  width: 45px;
+  height: 45px;
+}
+.qr span {
+  display: block;
+  font: 5px var(--mono);
+  margin-top: 8px;
+}
+.productLabel {
+  position: absolute;
+  right: 6%;
+  top: 68%;
+  font: 7px var(--mono);
+  padding: 9px;
+  background: #20211fee;
+  border: 1px solid var(--line);
+}
+.productLabel i {
+  width: 4px;
+  height: 4px;
+}
+.flowSteps {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 25px 0;
+  position: relative;
+}
+.flowSteps:before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--line);
+  top: 5px;
+}
+.flowSteps button {
+  position: relative;
+  font: 9px var(--mono);
+  color: var(--muted);
+  padding: 0 3px 8px;
+}
+.flowSteps i {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #83705a;
+  background: #1c1c1b;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+}
+.flowSteps button[aria-pressed="true"] {
+  color: var(--amber);
+}
+.flowSteps button[aria-pressed="true"] i {
+  background: var(--amber);
+  box-shadow: 0 0 0 5px #e9a66c11;
+}
+.flowDescription {
+  display: flex;
+  gap: 17px;
+  font-size: 11px;
+  color: var(--muted);
+  margin: 25px 30px 45px;
+  max-width: 390px;
+}
+.flowDescription > span {
+  font: 10px var(--mono);
+  color: var(--amber);
+  padding-top: 4px;
+}
+.farmVisual {
+  background: #24352c;
+  color: #e8e9d7;
+}
+.farmBrand {
+  font-size: 42px;
+  letter-spacing: -0.07em;
+  font-weight: 700;
+  padding: 24px 32px 0;
+}
+.farmBrand span {
+  font-size: 25px;
+  margin-left: 3px;
+  color: #adc9a0;
+}
+.farmSlogan {
+  font-size: 33px;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  padding: 15px 32px;
+  position: relative;
+  z-index: 2;
+}
+.produce {
+  height: 190px;
+  position: absolute;
+  top: 138px;
+  right: 25px;
+  width: 200px;
+  transform: rotate(-12deg);
+}
+.tomato {
+  width: 112px;
+  height: 100px;
+  border-radius: 45%;
+  background: radial-gradient(circle at 28% 30%, #d57c4b, #a34c2d 65%, #5b3627);
+  position: absolute;
+  right: 12px;
+  top: 55px;
+  box-shadow: 20px 25px 30px #0004;
+  transform: rotate(25deg);
+}
+.tomato i {
+  position: absolute;
+  left: 36px;
+  top: -10px;
+  background: #5b6d3b;
+  width: 35px;
+  height: 27px;
+  clip-path: polygon(
+    50% 0,
+    60% 40%,
+    100% 20%,
+    70% 55%,
+    100% 90%,
+    55% 70%,
+    25% 100%,
+    30% 60%,
+    0 30%,
+    40% 40%
+  );
+}
+.leaf {
+  width: 140px;
+  height: 75px;
+  background: linear-gradient(20deg, #496846, #8e9d62);
+  border-radius: 100% 0 100% 0;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  transform: rotate(-25deg);
+  box-shadow: 10px 15px 30px #0004;
+}
+.leaf:after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  top: 50%;
+  height: 1px;
+  background: #c1c89a66;
+  width: 76%;
+  transform: rotate(-20deg);
+}
+.carrot {
+  width: 48px;
+  height: 135px;
+  background: linear-gradient(90deg, #a86b35, #cf9252, #b8793a);
+  clip-path: polygon(10% 0, 85% 0, 100% 20%, 45% 100%, 0 20%);
+  position: absolute;
+  top: 75px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+.marketPath {
+  margin: 85px 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font: 7px var(--mono);
+  border-top: 1px solid #ffffff20;
+  padding-top: 20px;
+}
+.marketPath i {
+  font-style: normal;
+  color: #99b58e;
+}
+.marketControls {
+  display: flex;
+  gap: 10px;
+  margin: 23px 30px 0;
+}
+.marketControls button {
+  border: 1px solid #ffffff30;
+  font: 9px var(--mono);
+  padding: 10px 16px;
+}
+.marketControls button[aria-pressed="true"] {
+  background: #d5dfc6;
+  color: #26392f;
+}
+.marketInfo {
+  font-size: 11px;
+  color: #c5cdbf;
+  padding: 17px 30px;
+  max-width: 420px;
+}
+.botanicalVisual {
+  background: radial-gradient(ellipse at center, #344238, #1b2521);
+}
+.botanical {
+  height: 340px;
+  position: relative;
+}
+.botanical > svg {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.03);
+}
+.fieldNote {
+  position: absolute;
+  left: 25px;
+  top: 30px;
+  font: 8px/1.8 var(--mono);
+  color: var(--cream);
+}
+.fieldNote span {
+  color: var(--muted);
+  font-size: 7px;
+}
+.botanicalQr {
+  position: absolute;
+  right: 38px;
+  top: 200px;
+  transform: rotate(6deg);
+  color: #b9c6ad;
+  padding: 13px;
+  border: 1px solid #b9c6ad33;
+}
+.botanicalQr svg {
+  width: 38px;
+  height: 38px;
+}
+.achievement {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  margin: 5px 30px;
+  padding: 20px 0;
+  border-block: 1px solid #b9c6ad30;
+  font: 8px var(--mono);
+  color: #bdc9b6;
+  letter-spacing: 0.07em;
+}
+.achievement > span {
+  font-size: 40px;
+}
+.achievement strong {
+  display: block;
+  font: 27px var(--sans);
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  margin-top: 7px;
+}
+.lockVisual {
+  background: radial-gradient(ellipse at 50% 40%, #2e414a, #171e22);
+}
+.hardwareBackdrop {
+  position: absolute;
+  inset: 50px -100px 50px;
+  opacity: 0.25;
+}
+.keypad {
+  position: relative;
+  z-index: 1;
+  margin: 35px auto 0;
+  width: 220px;
+  background: linear-gradient(125deg, #333e40, #171c1f);
+  border: 1px solid #62747966;
+  box-shadow: 15px 20px 40px #0006;
+  padding: 22px;
+  border-radius: 9px;
+  transform: perspective(800px) rotateY(-7deg) rotateX(4deg);
+}
+.lockDisplay {
+  background: #0d191a;
+  padding: 15px 12px;
+  border: 1px solid #334a49;
+  color: var(--cyan);
+  font: 15px var(--mono);
+  letter-spacing: 0.16em;
+  text-align: center;
+  box-shadow: inset 0 3px 8px #0006;
+}
+.lockDisplay small {
+  display: block;
+  font: 5px var(--mono);
+  letter-spacing: 0.03em;
+  margin-top: 8px;
+  color: #748b88;
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 19px;
+}
+.keys button {
+  height: 37px;
+  border: 1px solid #52626355;
+  background: linear-gradient(#3a4545, #293334);
+  box-shadow: 0 3px 0 #10181a;
+  border-radius: 3px;
+  font: 12px var(--mono);
+}
+.keys button:hover {
+  background: #58676a;
+  color: #fff;
+}
+.keys button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+.keypadHelp {
+  position: relative;
+  text-align: center;
+  font: 9px var(--mono);
+  margin-top: 28px;
+  color: var(--muted);
+}
+.keypadHelp strong {
+  color: var(--cyan);
+}
+.lockStatus {
+  position: relative;
+  text-align: center;
+  font: 9px var(--mono);
+  color: var(--cyan);
+  margin-top: 12px;
+}
+@media (max-width: 1100px) {
+  .project {
+    gap: 5%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .visual {
+    min-height: 540px;
+  }
+  .farmSlogan {
+    font-size: 27px;
+  }
+  .produce {
+    transform: scale(0.8) rotate(-12deg);
+    right: 0;
+  }
+  .flowSteps button {
+    font-size: 8px;
+  }
+  .projectIndex a {
+    font-size: 10px;
+    gap: 10px;
+  }
+  .visualTop {
+    font-size: 7px;
+    padding: 20px;
+  }
+  .visualFoot {
+    font-size: 7px;
+    left: 20px;
+  }
+}
+@media (max-width: 999px) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .visualColumn {
+    max-width: 720px;
+  }
+  .visual {
+    min-height: 550px;
+  }
+  .projectIndex {
+    grid-template-columns: 1fr 1fr;
+  }
+  .projectIndex a:nth-child(2) {
+    border-right: 0;
+  }
+  .projectIndex a:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+  .projectIndex a:nth-child(3) {
+    padding-left: 0;
+  }
+  .workIntro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .story > h3 {
+    font-size: 52px;
+  }
+  .packageScene {
+    height: 330px;
+  }
+  .produce {
+    right: 50px;
+    transform: scale(1.2) rotate(-12deg);
+  }
+  .farmSlogan {
+    font-size: 40px;
+  }
+  .marketPath {
+    margin-top: 80px;
+  }
+  .keypad {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .work {
+    padding-top: 70px;
+  }
+  .projectIndex {
+    margin: 35px 0 45px;
+  }
+  .projectIndex a {
+    font-size: 9px;
+    padding: 18px 12px;
+    gap: 9px;
+  }
+  .projectIndex span {
+    font-size: 8px;
+  }
+  .project {
+    padding-bottom: 65px;
+    margin-bottom: 60px;
+    gap: 30px;
+  }
+  .visual {
+    min-height: 490px;
+  }
+  .visualTop {
+    padding: 17px 15px;
+    font-size: 6px;
+  }
+  .visualFoot {
+    left: 15px;
+    font-size: 6px;
+  }
+  .packageScene {
+    height: 270px;
+  }
+  .qr {
+    left: 12%;
+  }
+  .productLabel {
+    font-size: 6px;
+    right: 4%;
+    top: 70%;
+  }
+  .flowSteps {
+    margin-inline: 15px;
+  }
+  .flowSteps button {
+    font-size: 7px;
+  }
+  .flowDescription {
+    font-size: 10px;
+    margin: 22px 20px 40px;
+  }
+  .farmBrand {
+    padding: 22px 23px 0;
+    font-size: 35px;
+  }
+  .farmSlogan {
+    padding: 15px 23px;
+    font-size: 28px;
+  }
+  .produce {
+    right: 0;
+    top: 140px;
+    transform: scale(0.8) rotate(-12deg);
+  }
+  .marketPath {
+    margin: 90px 20px 0;
+    font-size: 6px;
+  }
+  .marketControls {
+    margin: 20px 20px 0;
+  }
+  .marketInfo {
+    padding: 15px 20px;
+    font-size: 10px;
+  }
+  .botanical {
+    height: 290px;
+  }
+  .achievement {
+    margin: 0 23px;
+    padding: 17px 0;
+  }
+  .achievement strong {
+    font-size: 24px;
+  }
+  .botanicalQr {
+    right: 25px;
+    top: 190px;
+  }
+  .keypad {
+    width: 205px;
+    padding: 18px;
+    margin-top: 26px;
+  }
+  .keypadHelp {
+    font-size: 8px;
+    margin-top: 23px;
+  }
+  .lockStatus {
+    font-size: 8px;
+  }
+  .story > h3 {
+    font-size: 43px;
+    margin-top: 23px;
+  }
+  .tagline {
+    font-size: 17px;
+  }
+  .projectMeta {
+    font-size: 8px;
+  }
+  .projectMeta > span:last-child {
+    max-width: 190px;
+  }
+  .projectActions {
+    flex-wrap: wrap;
+  }
+  .userFlow {
+    gap: 7px;
+  }
+  .userFlow > span {
+    font-size: 8px;
+  }
+}
+.packageScene:has(canvas) .packageFallback{display:none}
+.packageFallback{z-index:0;color:#b48a60;line-height:1}
+@media(max-width:650px){.description,.storyBlock p,.why p{font-size:14px}.storyBlock li{font-size:13px}.flowSteps button{font-size:10px;min-height:44px}.marketControls button{font-size:11px;min-height:44px}.marketInfo,.flowDescription{font-size:12px}.projectActions>a:first-child,.nextProject{font-size:10px}.sourceNote summary{font-size:11px;min-height:30px}.keys button{height:40px}.keypadHelp,.lockStatus{font-size:9px}}

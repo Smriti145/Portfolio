@@ -1,0 +1,140 @@
+.current {
+  padding: 80px 0 90px;
+  background: linear-gradient(110deg, #20221b, #171b19 55%, #151718);
+  border-top: 1px solid var(--line);
+}
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  align-items: center;
+}
+.inner > div > p:first-child {
+  font-size: 9px;
+  color: var(--sage);
+}
+.inner h2 {
+  font-size: 65px;
+  font-weight: 500;
+  margin-top: 22px;
+}
+.inner h2 > span {
+  font-size: 35px;
+  margin-left: 18px;
+  color: var(--sage);
+}
+.copy {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+.repo {
+  font: 9px var(--mono);
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  margin-top: 28px;
+}
+.repo:hover {
+  color: var(--sage);
+}
+.console {
+  background: #111514;
+  border: 1px solid #a8bd9829;
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  font: 8px var(--mono);
+  color: var(--muted);
+}
+.bar span:last-child {
+  font-size: 7px;
+  color: var(--sage);
+}
+.steps {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+}
+.steps button {
+  flex: 1;
+  padding: 15px 12px;
+  font: 8px var(--mono);
+  color: var(--muted);
+  text-align: left;
+  border-right: 1px solid var(--line);
+}
+.steps button:last-child {
+  border-right: 0;
+}
+.steps button span {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+}
+.steps button[aria-pressed="true"] {
+  background: #a8bd980d;
+  color: var(--sage);
+}
+.output {
+  padding: 26px;
+  font: 10px var(--mono);
+  min-height: 165px;
+}
+.output h3 {
+  font: 17px var(--sans);
+  letter-spacing: -0.03em;
+  margin-top: 18px;
+}
+.output p {
+  font: 11px/1.7 var(--sans);
+  color: var(--muted);
+  margin-top: 10px;
+}
+.consoleFooter {
+  font: 8px var(--mono);
+  padding: 14px 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+.consoleFooter i {
+  font-style: normal;
+  color: var(--sage);
+}
+@media (max-width: 800px) {
+  .inner {
+    gap: 6%;
+  }
+  .inner h2 {
+    font-size: 50px;
+  }
+  .inner h2 > span {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 650px) {
+  .current {
+    padding: 60px 0;
+  }
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .inner h2 {
+    font-size: 52px;
+  }
+  .copy {
+    font-size: 13px;
+  }
+  .output {
+    padding: 22px;
+  }
+  .consoleFooter {
+    font-size: 7px;
+  }
+}

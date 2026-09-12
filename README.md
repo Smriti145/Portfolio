@@ -120,19 +120,6 @@ When reduced motion is enabled, the video starts paused and the heavier motion e
 The portfolio uses locally hosted fonts along with the supplied hero video and poster image.
 
 The hero video has no dialogue, so there is no transcript associated with it.
-
-## Deployment
-
-The project is configured for static deployment.
-
-`.openai/hosting.json` contains the existing Sites project configuration.
-
-If the portfolio is moved to another host, update the canonical URL along with the values in:
-
-* `app/layout.tsx`
-* `app/robots.ts`
-* `app/sitemap.ts`
-
 ---
 
 Built by **Smriti Pandey**.

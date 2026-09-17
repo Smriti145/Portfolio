@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import s from "./Projects.module.css";
+import MobileProjectVisual from "./MobileProjectVisual";
 const Scene = dynamic(() => import("./Scene"), { ssr: false });
 function Qr() {
   return (
@@ -19,7 +20,16 @@ function Qr() {
     </svg>
   );
 }
-export default function ProjectVisual({ id }: { id: string }) {
+export default function ProjectVisual({
+  id,
+  number,
+  total,
+}: {
+  id: string;
+  number: string;
+  total: number;
+}) {
+  const counter = `${number} — ${String(total).padStart(2, "0")}`;
   const [step, setStep] = useState(0);
   const [code, setCode] = useState("");
   const [status, setStatus] = useState("LOCKED");
@@ -46,12 +56,14 @@ export default function ProjectVisual({ id }: { id: string }) {
     if (status === "UNLOCKED") setStatus("LOCKED");
     setCode((prev) => (prev + key).slice(-4));
   };
+  if (id === "grocerycompare" || id === "personal-helper")
+    return <MobileProjectVisual id={id} counter={counter} />;
   if (id === "tracechain")
     return (
       <div className={`${s.visual} ${s.traceVisual}`}>
         <div className={s.visualTop}>
           <span>TRACECHAIN / SYSTEM EXPLORER</span>
-          <span className="accent">01 — 04</span>
+          <span className="accent">{counter}</span>
         </div>
         <div className={s.packageScene}>
           <Scene mode="package" />
@@ -102,7 +114,7 @@ export default function ProjectVisual({ id }: { id: string }) {
       <div className={`${s.visual} ${s.farmVisual}`}>
         <div className={s.visualTop}>
           <span>FARMIO / MARKETPLACE FLOW</span>
-          <span>02 — 04</span>
+          <span>{counter}</span>
         </div>
         <div className={s.farmBrand}>
           farmio<span>↗</span>
@@ -152,7 +164,7 @@ export default function ProjectVisual({ id }: { id: string }) {
       <div className={`${s.visual} ${s.botanicalVisual}`}>
         <div className={s.visualTop}>
           <span>ANVESHA / FIELD NOTES</span>
-          <span>03 — 04</span>
+          <span>{counter}</span>
         </div>
         <div className={s.botanical}>
           <svg
@@ -207,7 +219,7 @@ export default function ProjectVisual({ id }: { id: string }) {
     <div className={`${s.visual} ${s.lockVisual}`}>
       <div className={s.visualTop}>
         <span>ACCESS CONTROL / EMBEDDED SYSTEM</span>
-        <span>04 — 04</span>
+        <span>{counter}</span>
       </div>
       <div className={s.hardwareBackdrop}>
         <Scene mode="circuit" />

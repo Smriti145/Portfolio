@@ -16,7 +16,7 @@
 }
 .projectIndex {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 55px 0 75px;
   border-block: 1px solid var(--line);
 }
@@ -28,11 +28,14 @@
   gap: 15px;
   align-items: center;
 }
-.projectIndex a:first-child {
+.projectIndex a:nth-child(3n + 1) {
   padding-left: 0;
 }
-.projectIndex a:last-child {
-  border: 0;
+.projectIndex a:nth-child(3n) {
+  border-right: 0;
+}
+.projectIndex a:nth-child(n + 4) {
+  border-top: 1px solid var(--line);
 }
 .projectIndex span {
   font: 9px var(--mono);
@@ -641,13 +644,17 @@
   .projectIndex {
     grid-template-columns: 1fr 1fr;
   }
-  .projectIndex a:nth-child(2) {
+  .projectIndex a:nth-child(n) {
+    border-right: 1px solid var(--line);
+    padding-left: 17px;
+  }
+  .projectIndex a:nth-child(2n) {
     border-right: 0;
   }
   .projectIndex a:nth-child(n + 3) {
     border-top: 1px solid var(--line);
   }
-  .projectIndex a:nth-child(3) {
+  .projectIndex a:nth-child(2n + 1) {
     padding-left: 0;
   }
   .workIntro {
@@ -800,6 +807,48 @@
     font-size: 8px;
   }
 }
-.packageScene:has(canvas) .packageFallback{display:none}
-.packageFallback{z-index:0;color:#b48a60;line-height:1}
-@media(max-width:650px){.description,.storyBlock p,.why p{font-size:14px}.storyBlock li{font-size:13px}.flowSteps button{font-size:10px;min-height:44px}.marketControls button{font-size:11px;min-height:44px}.marketInfo,.flowDescription{font-size:12px}.projectActions>a:first-child,.nextProject{font-size:10px}.sourceNote summary{font-size:11px;min-height:30px}.keys button{height:40px}.keypadHelp,.lockStatus{font-size:9px}}
+.packageScene:has(canvas) .packageFallback {
+  display: none;
+}
+.packageFallback {
+  z-index: 0;
+  color: #b48a60;
+  line-height: 1;
+}
+@media (max-width: 650px) {
+  .description,
+  .storyBlock p,
+  .why p {
+    font-size: 14px;
+  }
+  .storyBlock li {
+    font-size: 13px;
+  }
+  .flowSteps button {
+    font-size: 10px;
+    min-height: 44px;
+  }
+  .marketControls button {
+    font-size: 11px;
+    min-height: 44px;
+  }
+  .marketInfo,
+  .flowDescription {
+    font-size: 12px;
+  }
+  .projectActions > a:first-child,
+  .nextProject {
+    font-size: 10px;
+  }
+  .sourceNote summary {
+    font-size: 11px;
+    min-height: 30px;
+  }
+  .keys button {
+    height: 40px;
+  }
+  .keypadHelp,
+  .lockStatus {
+    font-size: 9px;
+  }
+}

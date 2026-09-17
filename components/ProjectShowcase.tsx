@@ -45,7 +45,7 @@ export default function ProjectShowcase() {
             </h2>
           </div>
           <p>
-            Four projects. Different problems.
+            {projects.length} projects. Different problems.
             <br />
             One drive to understand and build.
           </p>
@@ -59,10 +59,14 @@ export default function ProjectShowcase() {
             </a>
           ))}
         </div>
-        {projects.map((p) => (
+        {projects.map((p, index) => (
           <article id={p.id} key={p.id} data-project className={s.project}>
             <div className={s.visualColumn} data-visual>
-              <ProjectVisual id={p.id} />
+              <ProjectVisual
+                id={p.id}
+                number={p.number}
+                total={projects.length}
+              />
             </div>
             <div className={s.story} data-story>
               <div className={s.projectMeta}>
@@ -90,7 +94,7 @@ export default function ProjectShowcase() {
                   <span key={label}>
                     <small>0{i + 1}</small>
                     {label}
-                    {i < 3 && <i>→</i>}
+                    {i < p.flow.length - 1 && <i>→</i>}
                   </span>
                 ))}
               </div>
@@ -136,10 +140,13 @@ export default function ProjectShowcase() {
                   </a>
                 )}
                 <a
-                  href={`#${projects[Number(p.number) % 4].id}`}
+                  href={`#${projects[(index + 1) % projects.length].id}`}
                   className={s.nextProject}
                 >
-                  {p.number === "04" ? "BACK TO FIRST" : "NEXT PROJECT"} ↓
+                  {index === projects.length - 1
+                    ? "BACK TO FIRST"
+                    : "NEXT PROJECT"}{" "}
+                  ↓
                 </a>
               </div>
             </div>

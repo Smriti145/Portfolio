@@ -130,4 +130,77 @@ export const projects: Project[] = [
     why: "Explores how software state, persistent memory, and physical behavior work together.",
     accent: "cyan",
   },
+  {
+    id: "grocerycompare",
+    number: "05",
+    name: "GroceryCompare",
+    category: "Grocery comparison / Mobile + API",
+    tagline: "One basket. A clearer comparison.",
+    description:
+      "A React Native grocery app that compares complete baskets across sample Blinkit, Zepto, and Swiggy offers.",
+    problem:
+      "Comparing individual prices can hide missing products, different pack sizes, and stale offers. A useful comparison needs to account for the whole basket.",
+    solution:
+      "A typed mobile app connects to an Express API and PostgreSQL through Prisma. The comparison engine checks availability, offer freshness, location, and equivalent pack sizes before ranking eligible basket totals.",
+    flow: [
+      "Browse products",
+      "Build a basket",
+      "Check eligibility",
+      "Compare totals",
+    ],
+    features: [
+      "Paginated product search and persisted cart preferences",
+      "Complete-basket comparison with pack-size and freshness checks",
+      "Integer-paise pricing and delivery-time tie-breaking",
+      "Shared TypeScript contracts and validated API requests",
+    ],
+    stack: [
+      "React Native",
+      "TypeScript",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Zustand",
+    ],
+    why: "Makes the rules behind a price comparison explicit, so a cheaper total is only useful when the basket is actually comparable.",
+    github: "https://github.com/Smriti145/GroceryCompare",
+    note: "The repository uses sample offers. It does not fetch live retailer prices or transfer baskets to checkout. Totals exclude checkout fees and discounts.",
+    accent: "cyan",
+  },
+  {
+    id: "personal-helper",
+    number: "06",
+    name: "Personal Helper",
+    category: "Saha / Native routine companion",
+    tagline: "A little structure for everyday life.",
+    description:
+      "Saha is a native Android and iOS companion for configurable routines, daily checklists, and personal wellbeing tracking.",
+    problem:
+      "Everyday routines can span multiple schedules and categories. Keeping reminders, completion, and changing preferences in sync takes more than a simple to-do list.",
+    solution:
+      "React Native screens share routine and scheduling logic with an account API. Saved routines and account data persist through the API, while Notifee manages native reminder queues with completion, snooze, quiet-hour, and category preferences.",
+    flow: [
+      "Set preferences",
+      "Build a routine",
+      "Track the day",
+      "Review the week",
+    ],
+    features: [
+      "Account registration, login, and configurable onboarding",
+      "Routine builder, daily checklist, and weekly insights",
+      "Medication schedules, meals, hydration, movement, and sleep tracking",
+      "Native reminders, data export, and account deletion",
+    ],
+    stack: [
+      "React Native",
+      "TypeScript",
+      "Notifee",
+      "React Native Keychain",
+      "Drizzle ORM",
+    ],
+    why: "Brings daily planning and personal tracking into one adaptable mobile experience, with explicit control over reminders and saved data.",
+    github: "https://github.com/Smriti145/Personal-Helper",
+    note: "Reminder delivery depends on device permissions and OS restrictions. Exact alarm delivery and indefinite background renewal are not guaranteed; cross-midnight snoozing remains an open audit item. Preview mode is unsaved.",
+    accent: "sage",
+  },
 ];
